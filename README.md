@@ -25,8 +25,10 @@ The first and fastest way is to use AWS's Serverless Application Respository to 
 If you prefer, you can install the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) and use it to package, deploy, and describe your application.  These are the commands you'll need to use:
 
 ```
+sam build
+
 sam package \
-    --template-file template.yaml \
+    --template-file .aws-sam/build/template.yaml \
     --output-template-file packaged.yaml \
     --s3-bucket REPLACE_THIS_WITH_YOUR_S3_BUCKET_NAME
 

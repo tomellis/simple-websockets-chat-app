@@ -8,6 +8,12 @@ const ddb = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' });
 const { TABLE_NAME } = process.env;
 
 exports.handler = async (event, context) => {
+  // Debugging
+  console.log("## ENVIRONMENT VARIABLES");
+  console.log(JSON.stringify(process.env, null, 2));
+  console.log("## EVENT");
+  console.log(JSON.stringify(event, null, 2));
+
   let connectionData;
   
   try {
